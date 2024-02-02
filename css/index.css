@@ -1,3 +1,49 @@
 body {
     font-family: 'Quicksand', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    padding: 0;
+    margin: 0;
+}
+
+.search {
+    width: 100vw;
+    height: 100vh;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputSearch {
+    width: 300px;
+    height: 30px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.searchIcon {
+    color: white;
+    font-size: 20px;
+}
+
+.iconContainer {
+    background-color: red;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconContainer:hover {
+    background-color: brown;
+    cursor: pointer;
+}
+
+.input {
+    display: flex;
 }
