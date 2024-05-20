@@ -1,0 +1,29 @@
+const btnIcon = document.getElementById('iconSearch')
+const inputSearch = document.getElementById('inputSearch')
+const businessCard = document.getElementById('businessCard').content
+const businessContainer = document.getElementById('business')
+const fragment = document.createDocumentFragment()
+let business = []
+
+btnIcon.addEventListener('click', async() => {
+    if (inputSearch.value.trim().length > 0){
+        business = await search(inputSearch.value)
+        await dibujarNegocios(business)
+        window.location.href = '#business'
+        //console.log('@@@ business => ', business)
+    }
+})
+
+
+const dibujarNegocios = negocios => {
+    businessContainer.innerHTML = ''
+    negocios.forEach((item) => {
+        businessCard.querySelector('img').setAttribute('src', item.photos_sample[0].photo_url ? item.photos_sample[0].photo_url : '../images/NA.jpg')
+        businessCard.querySelector('p').textContent = item.name || 'N/A'
+        businessCard.querySelector('span').textContent = item.type
+        businessCard.querySelector('button').dataset.id = item.business_id
+        const clone = businessCard.cloneNode(true)
+        fragment.appendChild(clone)
+    })
+    businessContainer.appendChild(fragment)
+}
