@@ -22,6 +22,8 @@
         </section>
         <section class="business" id="business">
         </section>
+        <section class="info" id="info">
+        </section>
     </main>
 
     <template id="businessCard">
@@ -31,8 +33,22 @@
             </div>
             <div>
                 <p>Negocio</p>
-                <span>Tipo</span>
-                <button class="btn btnDark">Detalles</button>
+                <p class="tipo">Tipo</p>
+                <p><button class="btn btnDark" id="info">Detalles</button></p>
+            </div>
+        </div>
+    </template>
+
+    <template class="modal" id="modal">
+        <div class="modalMostrar">
+            <div class="modalContenido">
+                <span class="cerrar" id="cerrar">&times;</span>
+                <img src="" alt="">
+                <h2 class="nombre"></h2>
+                <p><h2>Direccion: </h2><h4 class="direccion"></h4></p>
+                <p><h2>C.P.: </h2><h4 class="codigo"></h4></p>
+                <p><h2>Estrellas: </h2><h4 class="estrellas"></h4></p>
+                <p><h2>Puntaje habitaciones: </h2><h4 class="reviews"></h4></p>
             </div>
         </div>
     </template>
